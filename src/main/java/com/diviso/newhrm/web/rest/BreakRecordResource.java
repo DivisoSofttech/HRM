@@ -1,7 +1,7 @@
 package com.diviso.newhrm.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
-import com.diviso.newhrm.domain.BreakRecord;
+
 import com.diviso.newhrm.service.BreakRecordService;
 import com.diviso.newhrm.web.rest.errors.BadRequestAlertException;
 import com.diviso.newhrm.web.rest.util.HeaderUtil;

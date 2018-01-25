@@ -6,10 +6,6 @@ import com.diviso.newhrm.repository.BreakRecordRepository;
 import com.diviso.newhrm.service.dto.BreakRecordDTO;
 import com.diviso.newhrm.service.mapper.BreakRecordMapper;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

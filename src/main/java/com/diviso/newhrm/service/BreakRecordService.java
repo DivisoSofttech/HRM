@@ -1,9 +1,8 @@
 package com.diviso.newhrm.service;
 
-import com.diviso.newhrm.domain.BreakRecord;
+
 import com.diviso.newhrm.service.dto.BreakRecordDTO;
 
-import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

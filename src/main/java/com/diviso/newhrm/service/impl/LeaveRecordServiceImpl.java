@@ -109,7 +109,7 @@ public class LeaveRecordServiceImpl implements LeaveRecordService {
    	   return leaveRecordRepository.findByDate(date,pageable);
       }
     /**
-     * Get the leaveRecord by Two Date.
+     * Get the leaveRecord between Two Dates.
      *
      * @param from, to
      */
