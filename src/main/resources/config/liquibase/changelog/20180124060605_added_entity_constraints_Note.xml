@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Note.
+    -->
+    <changeSet id="20180124060605-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="break_record_id"
+                                 baseTableName="note"
+                                 constraintName="fk_note_break_record_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="break_record"/>
+
+        <addForeignKeyConstraint baseColumnNames="leave_record_id"
+                                 baseTableName="note"
+                                 constraintName="fk_note_leave_record_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="leave_record"/>
+
+    </changeSet>
+</databaseChangeLog>

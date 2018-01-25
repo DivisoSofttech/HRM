@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "peoples",
+            "otherEntityName": "peoples",
+            "otherEntityRelationshipName": "shifts"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "from",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "till",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180124060558",
+    "entityTableName": "shifts",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "microserviceName": "newhrm"
+}

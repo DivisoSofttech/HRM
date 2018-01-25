@@ -1,0 +1,70 @@
+entity Shifts {
+  	name String,     
+	from LocalDate,
+	till LocalDate
+	
+}
+entity Peoples {
+  reference Long
+	
+}
+
+entity Role {
+   reference Long
+	
+}
+
+entity Leaves{  
+	name String,
+	description String,
+	noOfDays String
+}
+
+entity Breaks {
+  	name String,
+	description String,
+	from LocalDate,
+	till LocalDate
+}
+
+
+
+entity BreakRecord {
+    date LocalDate,
+	time LocalDate
+}
+entity LeaveRecord {
+	date LocalDate,
+	time LocalDate
+	
+
+}
+entity Note{
+	dateOfCreation LocalDate,   
+	matter String
+}
+relationship OneToMany{
+  BreakRecord{notes} to  Note
+}
+relationship OneToMany{
+  LeaveRecord{notes} to  Note
+}
+relationship OneToMany {
+	Shifts{peoples} to Peoples 
+	Breaks{breakRecords} to BreakRecord
+	Leaves{leaveRecord} to LeaveRecord
+}
+
+relationship OneToOne {
+	BreakRecord{peoples} to Peoples 
+	LeaveRecord{peoples} to Peoples 
+	
+}
+
+
+relationship ManyToMany {
+	Role{peoples} to Peoples
+}
+paginate * with pagination
+dto * with mapstruct
+service all with serviceImpl
